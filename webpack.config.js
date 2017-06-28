@@ -1,10 +1,9 @@
 const path 							= require('path');
 const webpack 					= require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-	
+
 	entry: {
 		filename: './index.js'
 	},
@@ -23,10 +22,6 @@ module.exports = {
 				query: {
 					presets: [ 'es2015', 'react' ]
 				}
-			},
-			{
-				test: /\.css$/,
-				loader: ExtractTextPlugin.extract('css-loader')
 			}
 		]
 	},
@@ -42,6 +37,5 @@ module.exports = {
 
 		// Extract HTML & CSS
 		new HtmlWebpackPlugin({ template: './src/index.html' }),
-		new ExtractTextPlugin( 'style.css' )
 	]
 };

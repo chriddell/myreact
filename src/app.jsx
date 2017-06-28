@@ -101,10 +101,8 @@ var BoardSwitcher = React.createClass({
 
 });
 
-ReactDOM.render(
-	<BoardSwitcher numBoards={ 5 } />,
-	document.getElementById( 'root' )
-);
+const root = document.querySelector('#root');
+ReactDOM.render( <BoardSwitcher numBoards={ 5 } />, root );
 
 /** Tutorial 4. Events
 
